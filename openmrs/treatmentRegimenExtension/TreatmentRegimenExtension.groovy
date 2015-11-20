@@ -5,7 +5,7 @@ import org.openmrs.module.bahmniemrapi.drugogram.contract.TreatmentRegimenExtens
 import org.openmrs.module.bahmniemrapi.drugogram.contract.RegimenRow;
 import org.openmrs.module.bahmniemrapi.drugogram.contract.TreatmentRegimen;
 
-public class MonthCalculationExtension implements TreatmentRegimenExtension {
+public class MonthCalculationExtension extends BaseTableExtension<TreatmentRegimen> {
 	@Override
 	public void update(TreatmentRegimen treatmentRegimen) {
 		Date treatmentStartDate = treatmentRegimen.getRows().first().getDate();
